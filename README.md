@@ -12,7 +12,7 @@
 
 # **Downloads**
 
-Available on [Academic Torrents]()
+Available on [Academic Torrents](https://academictorrents.com/details/9c920dd59f83241124b1e2c345db31f3a2edcd31)
 
 # **Using opus**
 
