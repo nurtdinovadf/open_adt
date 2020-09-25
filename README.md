@@ -18,6 +18,41 @@ Available on [Academic Torrents](https://academictorrents.com/details/9c920dd59f
 
 Please refer to [Open STT opus helpers](https://github.com/snakers4/open_stt/blob/master/README.md#how-to-open-opus)
 
+# **Annotation format**
+
+Each loop is annotated as a list of combined strokes. Each combined stroke has a unique ID, and each instrument (or single stroke, or note) has its own unique ID. The `DOUBLE` stroke simply means repeat the previous stroke.
+```
+strokes = {
+ 1: 'Kick',
+ 2: 'Snare',
+ 3: 'Tom',
+ 4: 'Cymbal',
+ 5: 'Tambourine',
+ 6: 'Cowbell',
+ -4: 'DOUBLE',
+ -3: 'OTHER',
+ -5: 'PAD',
+ 0: 'BLANK'}
+ 
+combstrokes = {
+ 1: (1, 4),
+ 2: (1,),
+ 3: (4,),
+ 4: (2, 4),
+ 5: (2,),
+ 6: (3,),
+ 7: (1, 2, 4),
+ 8: (1, 3),
+ 9: (1, 2),
+ 10: (3, 4),
+ 11: (5,),
+ 12: (1, 3, 4),
+ 13: (2, 3),
+ 14: (1, 2, 3),
+ ...
+}
+```
+
 # **Further work**
 
 - Eliminating some known issues like abrupt hit endings.
